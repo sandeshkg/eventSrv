@@ -56,6 +56,7 @@ namespace EventServer.Entities
         public DateTime startTime { get; set; }
         public string type { get; set; }
         public string duration { get; set; }
+        public List<string> eventImage { get; set; }
     }
     public class SpecEventDetails
     {
