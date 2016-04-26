@@ -81,7 +81,8 @@ namespace EventServer.Controllers
                         iconImageURL = dataTableProcesses.GetThisColumnValue("eventDspPic", row),
                         duration = dataTableProcesses.GetThisColumnValue("eventDuration", row)
                     };
-
+                    eventDetail.eventImage = new List<string>();
+                    eventDetail.eventImage = eventDetail.iconImageURL.Split(',').ToList();
                     eventDetailsEntity.Add(eventDetail);
                 }
             }
