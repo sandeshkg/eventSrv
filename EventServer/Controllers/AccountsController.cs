@@ -166,7 +166,8 @@ namespace EventServer.Controllers
             }
             var user = new ApplicationUser()
             {
-                UserName = Guid.NewGuid().ToString().Replace('-' , 'h'),//createUserModel.Username,
+                UserName = createUserModel.Email.Substring(0, createUserModel.Email.IndexOf('@')),
+                //UserName = Guid.NewGuid().ToString().Replace('-' , 'h'),//createUserModel.Username,
                 Email = createUserModel.Email,
             };
 

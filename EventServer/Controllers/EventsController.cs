@@ -24,7 +24,7 @@ namespace EventServer.Controllers
             
         }
 
-        [Authorize]
+        //[Authorize]
         public List<EventDetails> GetEventDetails()
         {
             DataTable eventDetails = new EventDataAccess().GetEventDetails();
@@ -33,7 +33,7 @@ namespace EventServer.Controllers
             return eventDetailsList;
         }
 
-        [Authorize]
+        //[Authorize]
         public List<EventDetails> GetEventDetails(int eventId)
         {
             DataTable eventDetails = dataaccess.GetEventDetails(eventId);
@@ -42,7 +42,7 @@ namespace EventServer.Controllers
             return eventDetailsList;
         }
 
-        [Authorize]
+        //[Authorize]
         public List<EventDetails> GetEventDetails(DateTime eventStartTime)
         {
             DataTable eventDetails = dataaccess.GetEventDetails(eventStartTime);
@@ -51,7 +51,7 @@ namespace EventServer.Controllers
             return eventDetailsList;
         }
 
-        [Authorize]
+        //[Authorize]
         public List<SpecEventDetails> GetEventIdDetails(DateTime date)
         {
             DataTable eventDetails = dataaccess.GetEventDetails(date);
@@ -59,7 +59,7 @@ namespace EventServer.Controllers
             return eventDetailsList;
         }
 
-        [Authorize]
+        //[Authorize]
         public List<EventDetails> EventDetailEntities(DataTable eventDetails)
         {
             List<EventDetails> eventDetailsEntity = new List<EventDetails>();
@@ -89,7 +89,7 @@ namespace EventServer.Controllers
             return eventDetailsEntity;
         }
 
-        [Authorize]
+        //[Authorize]
         public List<SpecEventDetails> EventDetailForIdDate(DataTable eventDetails)
         {
             List<SpecEventDetails> eventDetailsEntity = new List<SpecEventDetails>();
