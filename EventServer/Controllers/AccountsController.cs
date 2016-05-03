@@ -158,7 +158,7 @@ namespace EventServer.Controllers
                 return BadRequest(ModelState);
             }
 
-            if(!createUserModel.Email.Contains("verizon.com"))
+            if(!createUserModel.Email.Contains("gmail.com"))
             {
                 //return Ok();//error silently. do notreveal..
                 //instead return a guid..make the user feel he is correct and let him wait forever :)
